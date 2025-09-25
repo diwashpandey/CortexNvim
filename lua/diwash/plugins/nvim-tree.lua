@@ -6,13 +6,12 @@ return {
     "nvim-tree/nvim-web-devicons",
   },
   config = function()
-    print("I'm here in fucking tree")
     require("nvim-tree").setup({
       view = {
         side = "right",
         width = 30,
         relativenumber = true,
-      },
+     },
       renderer = {
         indent_markers = {
           enable = true,

@@ -1,6 +1,3 @@
-
-print("Hello I'm here")
-
 -- For the treestructure
 vim.g.newrw_lifestyle = 3
 
