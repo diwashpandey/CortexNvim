@@ -5,18 +5,22 @@ return {
   config = function()
     local transparent = false
     local function apply()
-
-      transparent = not transparent; 
+      transparent = not transparent
       require("tokyonight").setup({
-        style = "storm",
+        style = "day",
         transparent = transparent,
         terminal_colors = true,
-        styles = { sidebars = transparent and "transparent" or "normal",
-                   floats   = transparent and "transparent" or "normal" },
+        styles = {
+          sidebars = transparent and "transparent" or "normal",
+          floats   = transparent and "transparent" or "normal",
+        },
       })
       vim.cmd("colorscheme tokyonight")
     end
     apply()
-    vim.keymap.set("n", "<leader>tt", apply)
+
+    -- keymap to toggle transparency
+    vim.keymap.set("n", "<leader>tt", apply, { desc = "Toggle Tokyonight transparency" })
   end,
 }
+
