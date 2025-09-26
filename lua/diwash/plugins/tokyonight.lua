@@ -7,7 +7,7 @@ return {
     local function apply()
       transparent = not transparent
       require("tokyonight").setup({
-        style = "day",
+        style = "night",
         transparent = transparent,
         terminal_colors = true,
         styles = {
