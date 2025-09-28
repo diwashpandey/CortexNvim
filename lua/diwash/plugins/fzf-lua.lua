@@ -6,8 +6,6 @@
 -- - Find fzf.exe by running `where fzf` in CMD
 -- - Add that folder to the line below so Neovim can find fzf
 
-vim.env.PATH = vim.env.PATH .. ";C:\\Users\\diwas\\AppData\\Local\\Microsoft\\WinGet\\Packages\\junegunn.fzf_Microsoft.Winget.Source_8wekyb3d8bbwe"
-
 return {
   "ibhagwan/fzf-lua",
   dependencies = { "nvim-tree/nvim-web-devicons" },
