@@ -5,8 +5,9 @@ return {
             require("bufferline").setup{
                 options = {
                     numbers = "ordinal",       -- show buffer numbers
-                    separator_style = "slant", -- change separator style
+                    separator_style = {"", ""}, -- change separator style
                     offsets = {{filetype = "NvimTree", text = "Explorer", padding = 1}}, -- NvimTree offset
+                    tab_size=18,
                 }
             }
 
@@ -18,7 +19,6 @@ return {
             vim.api.nvim_set_hl(0, "BufferLineIndicatorSelected", {bg = "NONE"})
 
             -- Navigations
-
             vim.keymap.set('n', '<leader>b[', '<cmd>BufferLineCyclePrev<CR>') -- Go to previous buffer
             vim.keymap.set('n', '<leader>b]', '<cmd>BufferLineCycleNext<CR>') -- Go to next buffer
 
