@@ -18,7 +18,8 @@ return {
       vim.cmd("colorscheme tokyonight")
     end
     apply()
-
+    
+    --TODO: Diwash
     -- keymap to toggle transparency
     vim.keymap.set("n", "<leader>tt", apply, { desc = "Toggle Tokyonight transparency" })
   end,
