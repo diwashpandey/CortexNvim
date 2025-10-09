@@ -15,7 +15,7 @@ return {
      },
       view = {
         side = "right",
-        width = 30,
+        width = 50,
         relativenumber = true,
      },
       renderer = {
