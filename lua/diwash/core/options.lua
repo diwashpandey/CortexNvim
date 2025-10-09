@@ -19,17 +19,16 @@ vim.opt.smartcase = true -- searches with case sensitive if you use capital lett
 vim.opt.termguicolors = true
 vim.opt.background = "dark"
 vim.opt.signcolumn = "yes" -- can see marks on lines (warnings, gits stuffs, etc)
+vim.opt.winborder = "rounded"
 
 -- Transparent Background
---[[ Commenting for now since we are using theme plugin to handle this
-vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
-vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" }) -- Keeps inactive windows transparent.
-vim.api.nvim_set_hl(0, "LineNr", { bg = "none" }) -- Line Number Bar on left side
-vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none" }) -- Current line number
-vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" }) -- Floating windows (Telescope, File Finder, etc)
-vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" }) -- Border or edges of floating windows
-vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" }) -- The left-side column showing git/LSP/debug symbols (like +, -, !, breakpoints)
-]]
+-- vim.api.nvim_set_hl(0, "Normal", { bg = "none" })
+-- vim.api.nvim_set_hl(0, "NormalNC", { bg = "none" }) -- Keeps inactive windows transparent.
+-- vim.api.nvim_set_hl(0, "LineNr", { bg = "none" }) -- Line Number Bar on left side
+-- vim.api.nvim_set_hl(0, "CursorLineNr", { bg = "none" }) -- Current line number
+-- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none" }) -- Floating windows (Telescope, File Finder, etc)
+-- vim.api.nvim_set_hl(0, "FloatBorder", { bg = "none" }) -- Border or edges of floating windows
+-- vim.api.nvim_set_hl(0, "SignColumn", { bg = "none" }) -- The left-side column showing git/LSP/debug symbols (like +, -, !, breakpoints)
 
 --backspace
 vim.opt.backspace = "indent,eol,start"
