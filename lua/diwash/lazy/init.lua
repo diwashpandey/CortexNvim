@@ -15,13 +15,8 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 require("lazy").setup({
-  {import = "diwash.plugins.colorschemes"},
-  {import = "diwash.plugins.editing"},
-  {import = "diwash.plugins.interface"},
+  {import = "diwash.plugins"},
   {import = "diwash.plugins.lsp"},
-  {import = "diwash.plugins.navigation"},
-  {import = "diwash.plugins.productivity"},
-  {import = "diwash.plugins.treesitter"},
 },{
   rocks = {
     enabled = false,
