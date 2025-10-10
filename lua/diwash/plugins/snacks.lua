@@ -1,7 +1,26 @@
-Snacks = Snacks
-vim = vim
+options_for_picker = {
+  enabled = true,
+  sources = {
+    explorer = {
+      layout = { layout = { position = "right" } },
+    }
+  },
+  win = {
+    list = {
+      keys = {
+        ["x"] = "explorer_move",
+      }
+    }
+  }
+
+}
+
 return {
   "folke/snacks.nvim",
+  dependencies = {
+    "nvim-tree/nvim-web-devicons"
+  },
+
   priority = 1000,
   lazy = false,
   ---@type snacks.Config
@@ -9,7 +28,7 @@ return {
     -- Explorer and picking
     explorer = { enabled = true },
     bigfile = { enabled = true },
-    picker = { enabled = true },
+    picker = options_for_picker,
     scope = { enabled = true },
 
     -- UI
