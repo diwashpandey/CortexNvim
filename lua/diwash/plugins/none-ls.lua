@@ -1,5 +1,6 @@
 return {
   "nvimtools/none-ls.nvim",
+  "nvimtools/none-ls-extras.nvim",
   dependencies = { "nvim-lua/plenary.nvim" },
   config = function()
     local null_ls = require("null-ls")
@@ -12,7 +13,7 @@ return {
 
         -- JavaScript / TypeScript / React
         null_ls.builtins.formatting.prettier,
-        null_ls.builtins.diagnostics.eslint_d,
+        require("none-ls.diagnostics.eslint"), -- requires none-ls-extras.nvim
 
         -- Go
         null_ls.builtins.formatting.goimports,
@@ -24,7 +25,7 @@ return {
       },
     })
 
-    vim.keymap.set("n", "<leader>gf", vim.lsp.buf.format, { desc = "Format current buffer" })
+    vim.keymap.set("n", "<leader>F", vim.lsp.buf.format, { desc = "Format current buffer" })
   end
 
 }
