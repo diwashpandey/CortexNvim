@@ -2,6 +2,7 @@ options_for_picker = {
   enabled = true,
   sources = {
     explorer = {
+      auto_close = true,
       layout = { layout = { position = "right" } },
     }
   },
