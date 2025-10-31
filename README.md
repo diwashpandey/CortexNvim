@@ -8,23 +8,37 @@ It’s a **workspace** built from first principles: clarity, flow, and control.
 
 ## Installation
 
+Here’s a polished **Installation** section with your repo link:
+
+---
+
+## Installation
+
 ### Linux
 
 ```bash
-git clone https://github.com/diwashpandey/CortexNvim
+git clone https://github.com/diwashpandey/CortexNvim ~/.config/nvim
 ```
 
 ### Windows
 
 ```powershell
-git clone https://github.com/diwashpandey/CortexNvim
+git clone https://github.com/diwashpandey/CortexNvim $env:LOCALAPPDATA\nvim
 ```
 
 ### macOS
 
 ```bash
-git clone https://github.com/diwashpandey/CortexNvim
+git clone https://github.com/diwashpandey/CortexNvim ~/.config/nvim
 ```
+
+Once cloned, open Neovim:
+
+```bash
+nvim
+```
+
+On the first launch, **Lazy.nvim** will automatically install all plugins and configurations. After it’s done, restart Neovim to finish setup.
 
 ---
 
@@ -87,7 +101,7 @@ Here’s the complete structure of CortexNvim:
 8 directories, 30 files
 
 
-Each file has a single, clear responsibility, nothing is mixed or redundant.
+Each file has a single, clear responsibility... nothing is mixed or redundant.
 The modular layout allows you to read, replace, or extend any feature independently.
 
 ---
