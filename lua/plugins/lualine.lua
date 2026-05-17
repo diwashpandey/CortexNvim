@@ -8,7 +8,12 @@ theme.normal.a = {
 }
 
 theme.normal.b = {
-  bg = mocha.non,
+  bg = mocha.base,
+  fg = mocha.mauve,
+}
+
+theme.normal.c = {
+  bg = mocha.base,
   fg = mocha.mauve,
 }
 
@@ -27,17 +32,17 @@ require("lualine").setup({
       {
         "buffers",
         mode = 2,
-        -- buffers_color = {
-        --   active = {
-        --     fg = mocha.text, -- same as theme.normal.a bg
-        --     bg = mocha.base,
-        --     gui = "bold",
-        --   },
-        --   inactive = {
-        --     fg = mocha.overlay0,
-        --     bg = mocha.base,
-        --   },
-        -- },
+        buffers_color = {
+          active = {
+            fg = mocha.text, -- same as theme.normal.a bg
+            bg = mocha.base,
+            gui = "bold",
+          },
+          inactive = {
+            fg = mocha.overlay0,
+            bg = mocha.base,
+          },
+        },
         symbols = {
           modified = " ●",
           alternate_file = "",
