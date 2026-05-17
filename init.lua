@@ -1,2 +1,3 @@
-require("diwash.core")
-require("diwash.lazy")
+require("options")
+require("bindings")
+require("vimpack")
