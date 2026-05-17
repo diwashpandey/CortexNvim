@@ -32,3 +32,14 @@ opt.completeopt = "menu,menuone,noselect"
 opt.swapfile = false
 opt.backup = false
 opt.undofile = true
+
+vim.diagnostic.config({
+  virtual_text = {
+    prefix = "●",
+    spacing = 4,
+  },
+  virtual_lines = { current_line = true }, -- shows full error below cursor line only
+  signs = true,
+  underline = true,
+  update_in_insert = false,
+})
