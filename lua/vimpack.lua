@@ -2,7 +2,7 @@ vim.pack.add({
   ------------
   -- Theme ---
   ------------
-  { src = "https://github.com/folke/tokyonight.nvim" },
+  { src = "https://github.com/catppuccin/nvim" },
 
   ------------
   -- LSP ---
@@ -18,16 +18,21 @@ vim.pack.add({
   -- Functionality ---
   --------------------
   { src = "https://github.com/stevearc/oil.nvim" },
+  { src = "https://github.com/lewis6991/gitsigns.nvim" },
 
   ---------
   -- UI ---
   ---------
-  { src = "https://github.com/nvim-tree/nvim-web-devicons" }, --- dependency for all of em
+  -- { src = "https://github.com/nvim-tree/nvim-web-devicons" },
+  { src = "https://github.com/nvim-mini/mini.icons" }, --- dependency for all of em
+
   { src = "https://github.com/folke/which-key.nvim" },
   { src = "https://github.com/folke/snacks.nvim" },
+
   { src = "https://github.com/MunifTanjim/nui.nvim" }, --- dependency for noice.nvim
+  { src = "https://github.com/rcarriga/nvim-notify" },
   { src = "https://github.com/folke/noice.nvim" },
-  { src = "https://github.com/akinsho/bufferline.nvim" },
+  { src = "https://github.com/nvim-lualine/lualine.nvim" },
 })
 
 require("plugins/theme")
@@ -38,5 +43,6 @@ require("plugins/conform")
 require("plugins/whichkey")
 require("plugins/snacks")
 require("plugins/noice")
-require("plugins/bufferline")
 require("plugins/oil")
+require("plugins/icons")
+require("plugins/lualine")

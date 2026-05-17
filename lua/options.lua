@@ -33,13 +33,42 @@ opt.swapfile = false
 opt.backup = false
 opt.undofile = true
 
+local vt_enabled = true
+
+
+---------------------
+--- Disgnostics -----
+---------------------
+
 vim.diagnostic.config({
-  virtual_text = {
-    prefix = "●",
-    spacing = 4,
-  },
-  virtual_lines = { current_line = true }, -- shows full error below cursor line only
-  signs = true,
+  virtual_text = false,
+  virtual_lines = { current_line = true },
+  signs = false,
   underline = true,
   update_in_insert = false,
+  severity_sort = true,
+})
+
+vim.api.nvim_set_hl(0, "DiagnosticUnderlineError", {
+  underline = false,
+  undercurl = true,
+  sp = "#f38ba8", -- red
+})
+
+vim.api.nvim_set_hl(0, "DiagnosticUnderlineWarn", {
+  underline = false,
+  undercurl = true,
+  sp = "#f9e2af", -- yellow
+})
+
+vim.api.nvim_set_hl(0, "DiagnosticUnderlineInfo", {
+  underline = false,
+  undercurl = true,
+  sp = "#89b4fa", -- blue
+})
+
+vim.api.nvim_set_hl(0, "DiagnosticUnderlineHint", {
+  underline = false,
+  undercurl = true,
+  sp = "#a6e3a1", -- green
 })

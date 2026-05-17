@@ -42,3 +42,11 @@ map("v", "<A-k>", ":m '<-2<CR>gv=gv", { silent = true })
 ------------------
 map("v", "<", "<gv", { desc = "Indent left" })
 map("v", ">", ">gv", { desc = "Indent right" })
+
+-------------------
+--- Diagnostic ----
+-------------------
+map("n", "<leader>ud", function()
+  local config = vim.diagnostic.config()
+  vim.diagnostic.config({ virtual_lines = not config.virtual_lines })
+end, { desc = "Toggle diagnostics" })

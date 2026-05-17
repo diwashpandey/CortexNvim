@@ -7,7 +7,19 @@ require("snacks").setup({
     position = "right",
   },
 
-  indent = { enabled = true },
+  indent = {
+    enabled = true,
+    char = "┊",
+    animate = {
+      enabled = false,
+    },
+    hl = "SnacksIndent",
+    scope = {
+      enabled = true,
+      char = "┊",
+      hl = "SnacksIndentScope",
+    },
+  },
   input = { enabled = true },
   picker = {
     enabled = true,
@@ -25,7 +37,7 @@ require("snacks").setup({
       },
     },
   },
-  notifier = { enabled = true },
+  notifier = { enabled = false },
   quickfile = { enabled = false },
   scope = { enabled = true },
   scroll = { enabled = true },
@@ -43,7 +55,7 @@ map("n", "<leader>fr", function() Snacks.picker.recent() end, { desc = "Recent F
 map("n", "<leader>fc", function() Snacks.picker.files({ cwd = vim.fn.stdpath("config") }) end,
   { desc = "Find Config File" })
 
-map("n", "<leader>ee", function() Snacks.explorer() end, { desc = "File Explorer" })
+map("n", "<leader>e", function() Snacks.explorer() end, { desc = "File Explorer" })
 map({ "n", "t" }, "<C-/>", function() Snacks.terminal() end, { desc = "Toggle Terminal" })
 map({ "n", "t" }, "<C-_>", function() Snacks.terminal() end, { desc = "which_key_ignore" })
 
@@ -56,3 +68,16 @@ map("n", "gr", function() Snacks.picker.lsp_references() end, { desc = "Referenc
 map("n", "gI", function() Snacks.picker.lsp_implementations() end, { desc = "Goto Implementation" })
 map("n", "]]", function() Snacks.words.jump(vim.v.count1) end, { desc = "Next Reference" })
 map("n", "[[", function() Snacks.words.jump(-vim.v.count1) end, { desc = "Prev Reference" })
+
+
+-------------------------------
+--- Color for Snacks Indent ---
+-------------------------------
+
+vim.api.nvim_set_hl(0, "SnacksIndent", {
+  fg = "#313244", -- inactive, subtle
+})
+
+vim.api.nvim_set_hl(0, "SnacksIndentScope", {
+  fg = "#585b70", -- active, just a little brighter
+})
