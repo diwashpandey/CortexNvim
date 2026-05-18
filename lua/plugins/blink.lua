@@ -4,12 +4,16 @@
 require("blink.cmp").setup({
   keymap = {
     preset = "default",
+
+    ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
+    ["<C-@>"] = { "show", "show_documentation", "hide_documentation" },
+
     ["<CR>"] = { "accept", "fallback" },
   },
 
   completion = {
     menu = {
-      auto_show = true,
+      auto_show = false,
     },
     documentation = {
       auto_show = true,
