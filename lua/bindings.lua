@@ -5,7 +5,7 @@ local map = vim.keymap.set
 --------------------
 --- Normal Mode ----
 --------------------
-map("i", "jk", "<Esc>", { noremap = true, silent = true })
+map("i", "jj", "<Esc>", { noremap = true, silent = true })
 
 
 ----------------

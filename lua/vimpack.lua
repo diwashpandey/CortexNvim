@@ -3,6 +3,7 @@ vim.pack.add({
   -- Theme ---
   ------------
   { src = "https://github.com/catppuccin/nvim" },
+  { src = "https://github.com/folke/tokyonight.nvim" },
 
   ------------
   -- LSP ---
@@ -35,7 +36,8 @@ vim.pack.add({
   { src = "https://github.com/nvim-lualine/lualine.nvim" },
 })
 
-require("plugins/theme")
+require("plugins/theme") -- NOTE: Theme Changer Script can handle this
+
 require("plugins/lsp")
 require("plugins/treesitter")
 require("plugins/blink")

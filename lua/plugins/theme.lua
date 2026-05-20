@@ -1,7 +1,4 @@
-require("catppuccin").setup({
-  integrations = {
-    bufferline = true,
-  },
-})
-
+-----------------------------------------
+--- NOTE: THEME changer can handle this
+-----------------------------------------
 vim.cmd.colorscheme("catppuccin-nvim")
