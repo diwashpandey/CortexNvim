@@ -12,12 +12,18 @@ map("i", "jj", "<Esc>", { noremap = true, silent = true })
 --- Windows ----
 ----------------
 map("n", "<leader>wv", "<C-w>v", { desc = "Vertical split" })
-map("n", "<leader>ws", "<C-w>s", { desc = "Horizontal split" })
+map("n", "<leader>wh", "<C-w>s", { desc = "Horizontal split" })
 map("n", "<leader>wq", "<C-w>q", { desc = "Close window" })
-map("n", "<C-h>", "<C-w>h", { desc = "Window left" })
-map("n", "<C-j>", "<C-w>j", { desc = "Window down" })
-map("n", "<C-k>", "<C-w>k", { desc = "Window up" })
-map("n", "<C-l>", "<C-w>l", { desc = "Window right" })
+
+vim.keymap.set("n", "<leader>wh", "<C-w>h", { desc = "Go to left window" })
+vim.keymap.set("n", "<leader>wj", "<C-w>j", { desc = "Go to lower window" })
+vim.keymap.set("n", "<leader>wk", "<C-w>k", { desc = "Go to upper window" })
+vim.keymap.set("n", "<leader>wl", "<C-w>l", { desc = "Go to right window" })
+
+vim.keymap.set("n", "<leader>h", "<C-w>h", { desc = "Move to left split" })
+vim.keymap.set("n", "<leader>j", "<C-w>j", { desc = "Move to lower split" })
+vim.keymap.set("n", "<leader>k", "<C-w>k", { desc = "Move to upper split" })
+vim.keymap.set("n", "<leader>l", "<C-w>l", { desc = "Move to right split" })
 
 ----------------
 --- Buffers ----
