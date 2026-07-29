@@ -16,6 +16,12 @@ require("conform").setup({
     css = { "prettier" },
     json = { "prettier" },
 
+    -- YAML
+    yaml = { "prettier" },
+
+    -- Docker
+    dockerfile = { "dockerfmt" },
+
     -- Go
     go = { "goimports", "gofumpt" },
     gomod = { "gofmt" },

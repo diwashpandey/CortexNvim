@@ -17,6 +17,12 @@ ts.install({
   "css",
   "json",
 
+  -- yaml
+  "yaml",
+
+  -- docker
+  "dockerfile",
+
   -- go language
   "go",
   "gomod",
