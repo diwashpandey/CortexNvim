@@ -8,13 +8,24 @@ require("blink.cmp").setup({
     ["<C-space>"] = { "show", "show_documentation", "hide_documentation" },
     ["<C-@>"] = { "show", "show_documentation", "hide_documentation" },
 
+    ["<Tab>"] = { "select_next", "fallback" },
+    ["<S-Tab>"] = { "select_prev", "fallback" },
+
     ["<CR>"] = { "accept", "fallback" },
   },
 
   completion = {
     menu = {
-      auto_show = false,
+      auto_show = true,
     },
+
+    list = {
+      selection = {
+        preselect = false,
+        auto_insert = false,
+      },
+    },
+
     documentation = {
       auto_show = true,
       auto_show_delay_ms = 300,
