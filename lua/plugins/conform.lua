@@ -27,6 +27,9 @@ require("conform").setup({
     gomod = { "gofmt" },
     gowork = { "gofmt" },
     gosum = {},
+
+    -- SQL
+    sql = { "sql_formatter" },
   },
 
   format_on_save = {

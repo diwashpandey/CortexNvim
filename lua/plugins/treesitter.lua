@@ -28,6 +28,9 @@ ts.install({
   "gomod",
   "gowork",
   "gosum",
+
+  -- database
+  "sql",
 })
 
 
