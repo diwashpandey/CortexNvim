@@ -7,11 +7,10 @@ local map = vim.keymap.set
 --------------------
 map("i", "jj", "<Esc>", { noremap = true, silent = true })
 
-
 ----------------
 --- Panes (Windows) ----
 ----------------
-map("n", "<leader>ps", "<C-w>v", { desc = "Vertical split" })
+map("n", "<leader>pv", "<C-w>v", { desc = "Vertical split" })
 map("n", "<leader>ph", "<C-w>s", { desc = "Horizontal split" })
 map("n", "<leader>pq", "<C-w>q", { desc = "Close window" })
 
@@ -23,8 +22,8 @@ map("n", "<leader>l", "<C-w>l", { desc = "Move to right split" })
 ----------------
 --- Tabs(Buffers) ----
 ----------------
-map("n", "<leader>tn", "<cmd>bnext<cr>", { desc = "Next buffer" })
-map("n", "<leader>tp", "<cmd>bprev<cr>", { desc = "Prev buffer" })
+map("n", "<leader>tl", "<cmd>bnext<cr>", { desc = "Next buffer" })
+map("n", "<leader>th", "<cmd>bprev<cr>", { desc = "Prev buffer" })
 map("n", "<leader>tq", "<cmd>bdelete<cr>", { desc = "Quit buffer" })
 
 -------------------
@@ -46,6 +45,6 @@ map("v", ">", ">gv", { desc = "Indent right" })
 --- Diagnostic ----
 -------------------
 map("n", "<leader>ud", function()
-  local config = vim.diagnostic.config()
-  vim.diagnostic.config({ virtual_lines = not config.virtual_lines })
+	local config = vim.diagnostic.config()
+	vim.diagnostic.config({ virtual_lines = not config.virtual_lines })
 end, { desc = "Toggle diagnostics" })

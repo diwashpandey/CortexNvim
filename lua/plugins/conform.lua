@@ -1,39 +1,53 @@
 require("conform").setup({
-  formatters_by_ft = {
-    -- Lua
-    -- lua = { "stylua" },
-    lua = {},
+	formatters_by_ft = {
+		-- Lua
+		-- lua = { "stylua" },
+		lua = {},
 
-    -- Python
-    python = { "ruff_format" },
+		-- Python
+		python = { "ruff_format" },
 
-    -- JS / TS / Web
-    javascript = { "prettier" },
-    typescript = { "prettier" },
-    javascriptreact = { "prettier" },
-    typescriptreact = { "prettier" },
-    html = { "prettier" },
-    css = { "prettier" },
-    json = { "prettier" },
+		-- JS / TS / Web
+		javascript = { "prettier" },
+		typescript = { "prettier" },
+		javascriptreact = { "prettier" },
+		typescriptreact = { "prettier" },
+		html = { "prettier" },
+		css = { "prettier" },
+		json = { "prettier" },
 
-    -- YAML
-    yaml = { "prettier" },
+		-- YAML
+		yaml = { "prettier" },
 
-    -- Docker
-    dockerfile = { "dockerfmt" },
+		-- Docker
+		dockerfile = { "dockerfmt" },
 
-    -- Go
-    go = { "goimports", "gofumpt" },
-    gomod = { "gofmt" },
-    gowork = { "gofmt" },
-    gosum = {},
+		-- Go
+		go = { "goimports", "gofumpt" },
+		gomod = { "gofmt" },
+		gowork = { "gofmt" },
+		gosum = {},
 
-    -- SQL
-    sql = { "sql_formatter" },
-  },
+		-- SQL
+		sql = { "sql_formatter" },
+	},
 
-  format_on_save = {
-    timeout_ms = 1000,
-    lsp_format = "fallback",
-  },
+	-- format_on_save = {
+	--   timeout_ms = 1000,
+	--   lsp_format = "fallback",
+	-- },
+	format_on_save = function(bufnr)
+		if
+			vim.bo[bufnr].filetype ~= "go"
+			and vim.bo[bufnr].filetype ~= "gomod"
+			and vim.bo[bufnr].filetype ~= "gowork"
+		then
+			return
+		end
+
+		return {
+			timeout_ms = 1000,
+			lsp_format = "fallback",
+		}
+	end,
 })

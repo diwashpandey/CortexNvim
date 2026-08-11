@@ -5,8 +5,8 @@ opt.number = true
 opt.relativenumber = true
 
 -- Indentation
-opt.tabstop = 2
-opt.shiftwidth = 2
+opt.tabstop = 3
+opt.shiftwidth = 3
 opt.expandtab = true
 opt.autoindent = true
 
@@ -16,6 +16,7 @@ opt.smartcase = true
 opt.hlsearch = false
 
 -- UI
+opt.wrap = true
 opt.termguicolors = true
 opt.signcolumn = "yes"
 opt.cursorline = true
