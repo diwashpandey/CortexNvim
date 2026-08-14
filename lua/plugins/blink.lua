@@ -37,7 +37,7 @@ require("blink.cmp").setup({
 -------------------------------
 --- Vim Built in Hover Docs ---
 -------------------------------
-vim.keymap.set("n", "<leader>h", function()
+vim.keymap.set("n", "gh", function()
   vim.lsp.buf.hover({
     border = "rounded",
   })
