@@ -1,32 +1,32 @@
 require("mason").setup()
 
 require("mason-lspconfig").setup({
-  ensure_installed = {
+	ensure_installed = {
 
-    -- Lua Language
-    "lua_ls",
+		-- Lua Language
+		"lua_ls",
 
-    -- HTML, CSS & Tailwind
-    "html",
-    "cssls",
-    "tailwindcss",
+		-- HTML, CSS & Tailwind
+		"html",
+		"cssls",
+		"tailwindcss",
 
-    -- Javascript and Typescript
-    "ts_ls",
+		-- Javascript and Typescript
+		"ts_ls",
 
-    -- Python language
-    "pyright",
+		-- Python language
+		"pyright",
 
-    -- Go language
-    "gopls",
+		-- Go language
+		"gopls",
 
-    -- Docker
-    "yamlls",
-    "dockerls",
+		-- Docker
+		"yamlls",
+		"dockerls",
 
-    -- SQL
-    "sqls",
-  },
+		-- SQL
+		"sqls",
+	},
 })
 
 -- ************* IMPORTANT ***********
@@ -51,7 +51,7 @@ require("mason-lspconfig").setup({
 --- 6. delve
 ---
 ---
---- Docker 
+--- Docker
 --- 7. dockerfmt
 ---
 ---
@@ -59,16 +59,16 @@ require("mason-lspconfig").setup({
 --- 8. sql-formatter
 
 vim.lsp.enable({
-  "lua_ls",
-  "html",
-  "cssls",
-  "ts_ls",
-  "pyright",
-  "gopls",
-  "tailwindcss",
-  "yamlls",
-  "dockerls",
-  "sqls",
+	"lua_ls",
+	"html",
+	"cssls",
+	"ts_ls",
+	"pyright",
+	"gopls",
+	"tailwindcss",
+	"yamlls",
+	"dockerls",
+	"sqls",
 })
 
 vim.keymap.set("n", "gd", vim.lsp.buf.definition)
